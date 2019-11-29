@@ -8,10 +8,10 @@
 		<version>2.2.1.RELEASE</version>
 		<relativePath/> <!-- lookup parent from repository -->
 	</parent>
-	<groupId>com.continuous</groupId>
-	<artifactId>basicApp</artifactId>
+	<groupId>com.multi</groupId>
+	<artifactId>MultiApp</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
-	<name>basicApp</name>
+	<name>MultiApp</name>
 	<description>Demo project for Spring Boot</description>
 
 	<properties>

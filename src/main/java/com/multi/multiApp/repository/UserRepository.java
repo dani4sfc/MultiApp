@@ -1,10 +1,10 @@
-package com.continuous.basicApp.repository;
+package com.multi.multiApp.repository;
 
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.data.repository.CrudRepository;
 import org.springframework.stereotype.Repository;
 
-import com.continuous.basicApp.model.User;
+import com.multi.multiApp.model.User;
 
 @Repository
 public interface UserRepository extends CrudRepository<User, Long>, JpaRepository<User, Long>{

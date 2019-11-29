@@ -1,7 +1,6 @@
-package com.continuous.basicApp.controller;
+package com.multi.multiApp.controller;
 
 import java.util.List;
-
 
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -16,47 +15,44 @@ import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
-import com.continuous.basicApp.model.Note;
-import com.continuous.basicApp.service.NoteServiceImpl;
+import com.multi.multiApp.model.User;
+import com.multi.multiApp.service.UserServiceImpl;
 
 @RestController
 @CrossOrigin(origins = "http://localhost:4200")
 
-//
-@RequestMapping(value = "/notes")
+@RequestMapping(value = "/users")
 
-public class NoteController {
-	
-	private static final Logger LOGGER = LoggerFactory.getLogger(NoteController.class);
+public class UserController {
+	private static final Logger LOGGER = LoggerFactory.getLogger(UserController.class);
 
 	@Autowired
-	private NoteServiceImpl service;
+	private UserServiceImpl service;
 	
-	
+
 	@GetMapping(path= "/{id}")
-	public Note findNoteById(@PathVariable(value = "id") Long id) {
+	public User findUserById(@PathVariable(value = "id") Long id) {
 		return service.findById(id);
 	}
 	
-	//In generic methods, let the / path
 	@GetMapping(path= "/")
-	public List<Note> getNotes(){
-		return (List<Note>) service.findAll();
+	public List<User> getUsers(){
+		return (List<User>) service.findAll();
 	}
 
 		
 	@PostMapping(path="/")
-	public Note addNote (@RequestBody Note note) {
-		return service.createNote(note);
+	public User addUser (@RequestBody User user) {
+		return service.createUser(user);
 	}
 	
 
-	//Adapt id with the note.id
+	//Adapt id with the User.id
 	@PutMapping(path="/{id}")
-	public Note updateNote(@PathVariable(value="id")Long id, @RequestBody Note note) {
+	public User updateUser(@PathVariable(value="id")Long id, @RequestBody User user) {
 				
-		if(note.getId( )== id) {
-			return service.updateNote(id, note);
+		if(user.getId( )== id) {
+			return service.updateUser(id, user);
 
 		}else {
 			return null;
@@ -65,10 +61,12 @@ public class NoteController {
 	
 	
 	@DeleteMapping(path="/{id}")
-	public void deleteNoteById (@PathVariable(value = "id") long id) {
+	public void deleteUserById (@PathVariable(value = "id") long id) {
 		
 		service.deleteById(id);
 	}
+	
+
 	
 	
 }

@@ -1,4 +1,4 @@
-package com.continuous.basicApp.model;
+package com.multi.multiApp.model;
 
 import java.util.Date;
 

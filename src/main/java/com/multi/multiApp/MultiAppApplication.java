@@ -1,4 +1,4 @@
-package com.continuous.basicApp;
+package com.multi.multiApp;
 
 import java.util.stream.Stream;
 
@@ -7,14 +7,14 @@ import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.context.annotation.Bean;
 
-import com.continuous.basicApp.model.Note;
-import com.continuous.basicApp.repository.NoteRepository;
+import com.multi.multiApp.model.Note;
+import com.multi.multiApp.repository.NoteRepository;
 
 @SpringBootApplication
-public class BasicAppApplication {
+public class MultiAppApplication {
 
 	public static void main(String[] args) {
-		SpringApplication.run(BasicAppApplication.class, args);
+		SpringApplication.run(MultiAppApplication.class, args);
 	}
 		
 	@Bean

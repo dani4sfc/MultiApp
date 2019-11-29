@@ -1,8 +1,8 @@
-package com.continuous.basicApp.service;
+package com.multi.multiApp.service;
 
 import java.util.List;
 
-import com.continuous.basicApp.model.User;
+import com.multi.multiApp.model.User;
 
 public interface UserService {
 	

@@ -1,12 +1,12 @@
-package com.continuous.basicApp.service;
+package com.multi.multiApp.service;
 
 import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
-import com.continuous.basicApp.model.User;
-import com.continuous.basicApp.repository.UserRepository;
+import com.multi.multiApp.model.User;
+import com.multi.multiApp.repository.UserRepository;
 
 @Service
 public class UserServiceImpl implements UserService{
